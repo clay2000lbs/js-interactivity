@@ -15,22 +15,19 @@ const addMovie = (e) => {
 
     movieTitle.textContent = inputField.value;
 
-    movieTitle.addEventListener('clicked', e => {
-        crossOffMovie()
-    })
+    movieTitle.addEventListener('click', crossOffMovie)
 
     movie.appendChild(movieTitle) 
 
     let deleteBtn = document.createElement('button')
     deleteBtn.textContent = "X"
-    deleteBtn.addEventListener('click', e => {
-        deleteMovie()
-    })
+    deleteBtn.addEventListener('click', deleteMovie)
     movie.appendChild(deleteBtn)
 
     let unOrederdList = document.querySelector('ul');
     unOrederdList.appendChild(movie);
 
+    inputField.value = '';
 }
 
 
